@@ -13,7 +13,7 @@ export default function FeedPost({ posts, removePost, timeout, setTimeout, likes
           const currentTime = timeout[post.id]
           newTime[post.id] = currentTime - 1
           if (newTime[post.id] === 0) {
-            // await removePost(post.id)
+            await removePost(post.id)
           }
         })
         setTimeout(newTime)
